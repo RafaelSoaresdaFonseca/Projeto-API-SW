@@ -1,0 +1,90 @@
+body{
+    background: black;
+}
+.banner{
+    display: block;
+    margin: 0px auto;
+    width: 20%;
+
+    
+}
+.busca{
+
+    float: left;
+}
+.imagem{
+    background-color: white;
+    width: 8%;
+    border-radius: 10%;
+}
+
+p{
+    text-transform: uppercase;
+    background: white;
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 15%;
+    font-weight: bold;
+    transition: 1s all;
+}
+.pesquisa{
+    display: inline;
+    width: 100%;
+}
+
+ul input{
+    position:absolute;
+    left: 46%;
+    top:65.5%;
+    margin-left:-110px;
+	margin-top:-40px;
+    display: inline-block;
+    width: 300px;
+    margin-top: 1.2rem;
+    
+}
+.botao {
+    width: 100px;
+    display: inline-block;
+    position:absolute;
+    left: 55%;
+    top:79%;
+    margin-left:-110px;
+	margin-top:-40px;
+    
+}
+
+.selecione{
+    width: 100px;
+    display: inline-block;
+    position:absolute;
+    left: 76%;
+    top:75%;
+    margin-left:-110px;
+	margin-top:-40px;
+
+}
+.informacoes{
+    font-size: 15px;
+    width: 150px;
+    height: 130px;
+    background: white;
+    text-align: center;
+    margin: 0px auto;
+    width: 30%;
+    margin-top: 2rem;
+}
+
+a{
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
