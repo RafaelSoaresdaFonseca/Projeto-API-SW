@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/2d1363b4c5.js" crossorigin="anonymous"></script>
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="styleLogin.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+      <script>
+        //Botão Login Google
+        function handleCredentialResponse(response) {
+          const data = jwt_decode(response.credential)
+          console.log(data)
+        }
+        window.onload = function () {
+          google.accounts.id.initialize({
+            client_id: "89953996258-30l4irc2498uauuhc9t6jhemtvr6f6er.apps.googleusercontent.com",
+            callback: handleCredentialResponse
+          });
+
+          google.accounts.id.renderButton(
+            document.getElementById("buttonGoogle"),
+            { theme: "outline", size: "large" ,
+            type:"standard",
+            shape:"pill",
+            theme:"filled_black",
+            text:"$ {button.text}",
+            size:"large",
+            logo_alignment:"left",
+            width:"100px"}  // customization attributes
+          );
+          google.accounts.id.prompt(); // also display the One Tap dialog
+        }
+      </script>
+      <script>
+        //Botão Login Facebook
+
+      function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+            if (response.status === 'connected') {
+                console.log('if connected');
+                 } else if (response.status === 'not_authorized') {
+                    console.log('if connected');
+                  } else {
+            console.log('if connected');
+        }
+      }
+    
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '1663848054009312',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v15.0'
+          });
+            
+          FB.AppEvents.logPageView();   
+            
+          FB.Canvas.setAutoResize();
+    
+          fbApiInit = true; //init flag
+        };
+    
+      function fbEnsureInit(callback) {
+        console.log('bora bill33333');
+        if(!window.fbApiInit) {
+            setTimeout(function() {fbEnsureInit(callback);}, 50);
+        } else {
+            if(callback) {
+                console.log('bora bill');
+                
+            }
+        }
+      };
+    
+    
+      
+     (function(d, s, id){
+            console.log('qualquer coisa2222');
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    
+  
+      function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+      });
+    }
+    
+    <fb:login-button 
+                scope="public_profile,email"
+                onlogin="checkLoginState();">
+            </fb:login-button>
+    
+      </script>
+  
+</head>
+<body>
+  <script>
+    function continuar(){
+      //window.location.href = "index.html";
+      // console.log('');
+    }
+  </script>
+    <main class="container">
+      <h2>Login</h2>
+        <form action="">
+            <div class="input-inicial">
+                <input type="text" name="email" id="email" placeholder="Digite seu email">
+             </div>
+             <div class="input-inicial">
+                <input type="password" name="password" id="emapassword" placeholder="Digite sua senha">
+              </div>
+                <a href="http://127.0.0.1:5500/public/index.html">
+                  <input type="button" value="Continue">
+                </a>
+        </form>    
+
+            <div class="rodape">
+              <p>Ou conecte com a sua conta do Google ou Facebook</p>
+                <div class="social-botao">
+                  <div id="buttonGoogle"></div>
+                      <p id="fullName"></p>
+                      <p id="sub"></p>
+                      <p id="given_name"></p>
+                      <p id="family_name"></p>
+                      <p id="email"></p>
+                      <p id="verifiedEmail"></p>
+                      <img id="picture" /> 
+                      
+                    <div id="fb-root"></div>
+                        <script async defer crossorigin="anonymous" 
+                          src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v15.0&appId=1663848054009312&autoLogAppEvents=1" 
+                          nonce="avj4FqyQ">
+                        </script>    
+                        <div class="fb-login-button" 
+                          data-width="350" 
+                          data-size="medium" 
+                          data-button-type="continue_with" 
+                          data-layout="rounded" 
+                          data-auto-logout-link="false" 
+                          data-use-continue-as="true">
+                        </div>
+                </div>
+            </div>
+
+
+
+        
+    </main>
+</body>
+</html>
