@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+Mono:wght@300&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Mono", sans-serif;
+}
+
+body{
+    background: linear-gradient(45deg, rgb(114, 112, 112), rgb(26, 25, 25));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main.container{
+    background: white;
+    max-width: 400x;
+    min-height:25vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 5px rgb(0,0,0,0.2);
+}
+main h2{
+    font-weight: 800;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+.input-inicial{
+    position: relative;
+}
+.input-inicial input{
+    outline: none;
+    font-size: 1.5rem;
+    color:black
+}
+form a input{
+    text-align: center;
+    width: 320px;
+    padding: 10px;
+    border-radius: 5px; 
+    background: rgb(114, 112, 112);
+    cursor: pointer;
+    color: white;
+    margin-top: 0.5rem;
+    
+    
+}
+form input[type="button"]:hover{
+    letter-spacing: 2px;
+    
+}
+.rodape{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.rodape {
+    width: 320px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+p{
+    color: black;
+}
+#buttonGoogle{
+    margin-top: 0.5rem;
+}
+#fb-root{
+    margin-top: 0.25rem;
+}
+
+
+
