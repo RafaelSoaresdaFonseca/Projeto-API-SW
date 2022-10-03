@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Star Wars</title>
+    <script>
+      const dados = fetch("http https://swapi.dev/api/people/1/");
+        then(function(response){
+          return response.json()
+        });
+
+        then(function(reponse){
+          console.log(response);
+        });
+    </script>
+         
+  </head>
+  <body>
+    <script>
+      function pesquisar(){
+
+      }
+    </script>
+
+    <img class="banner" src="imagens/logo.png"> 
+    <div class="menu-lateral">
+      <ul>
+        <li ><img class="imagem" src="imagens/personagens-black.svg"><p><a href="usuário">Usuário</a></p></li>
+        <li ><img class="imagem" src="imagens/personagens-black.svg"><p><a href="cadastros">Usuários Cadastrados</a></p></li>
+        <li><img class="imagem" src="imagens/nave-black.svg" ><p>Buscar Personagem ou Planeta</p></li>
+        <li><input type="search" id="texto" placeholder="Digite o Numero do Personagem ou do Planeta"></li>            
+        <select class="selecione" name="tipo">
+          <option value="selecione">Selecione</option>
+          <option value="personagem">Personagem</option>
+          <option value="Planeta">Planeta</option>
+        </select>
+        <button class="botao" onclick=pesquisar()>Pesquisar</button>
+        
+
+        <!-- <li class="personagem"><img src="imagens/nave-black.svg"><p>Buscar Personagem</p>
+            <div class="pesquisa-personagem">
+              <input type="search" id="texto" placeholder="Digite o Numero do Personagem">
+              <button class="botao" onclick=pesquisar()>Pesquisar</button>
+            </div>
+          
+        </li>
+        <li><img src="imagens/nave-black.svg"><p>Buscar Planeta</p>
+            <div class="pesquisa-planeta">
+              <input type="search" id="texto" placeholder="Digite o Numero do Planeta">
+              <button class="botao" onclick=pesquisar()>Pesquisar</button>
+            </div>
+        </li> -->
+      </ul>
+    </div>
+
+    <div class="informacoes">
+      <h2>Informações Solicitadas</h2>
+      <script></script>
+    </div>   
+ 
+  </body>
+</html>
